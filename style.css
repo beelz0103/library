@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
-* {
+body {
     font-family: 'Roboto', 'Cedarville Cursive', sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +8,8 @@
 
 body {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;       
+    background-color: aliceblue;
 }
 
 #header {
@@ -112,18 +113,41 @@ input#read {
 label {
     font-size: 1.25rem;
 }
+*/
 
-#cardcontainer {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(auto-fit, 250px);
-    gap: 20px
+#cardcontainer {    
+    display: grid;    
+    padding: 10px 30px;    
+    gap: 30px 30px;
+    grid-template-rows: repeat(1, 310px);
+    grid-template-columns: repeat(4, 310px);  
+    grid-auto-rows: auto;
+    justify-content: center;  
 }
 
-#cardcontainer div {
-    background-color: lightskyblue;
-} */
+#cardcontainer > div {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cedarville Cursive';
+    font-size: 24px;
+    background-color: white;
 
+    border: 1px solid darkgray;
+    box-shadow: (0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#cardcontainer > div > button {
+    align-self: center;
+    margin: 5px;
+    width: 125px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 10px;    
+    align-self: center;
+}
 
 .modal-form {
     position: fixed;

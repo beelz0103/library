@@ -57,11 +57,6 @@ function buildCard(value) {
   page_div.textContent = `Pages: ${value.pages}`
   card_div.appendChild(page_div)
 
-  const delete_btn = document.createElement("button")  
-  delete_btn.textContent = "Delete"
-  delete_btn.addEventListener("click", deleteBook)
-  card_div.appendChild(delete_btn)  
-
   const read_btn = document.createElement("button")
   
   if (value.read ) {
@@ -75,6 +70,11 @@ function buildCard(value) {
 
   read_btn.addEventListener("click", changeReadStatus)
   card_div.appendChild(read_btn)  
+
+  const delete_btn = document.createElement("button")  
+  delete_btn.textContent = "Delete"
+  delete_btn.addEventListener("click", deleteBook)
+  card_div.appendChild(delete_btn)  
 
   card_container.appendChild(card_div)
 }
@@ -128,3 +128,6 @@ window.addEventListener("beforeunload", () => {
 })
 
 loadLibrary();
+
+//ADD VALIDATIONS
+//FORMAT TEXT PROPERLY
