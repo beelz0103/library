@@ -5,36 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <script src="https://kit.fontawesome.com/5030455afe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<button id="addbook">Add Book</button>
-<div id="formcontainer">
-    <div id="formheader">Add Book</div>
-    <form id="mylibrary">
-        <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" value = "konosuba">
+<div id="header">Tet's Library</div>
+
+<button id="addbook">
+    <div>Add Book </div>
+    <i class="fa-solid fa-plus"></i>
+</button>
+
+<div class="modal-form">
+    <div id="modal-formcontainer">
+        
+        <div id="formheader">
+            <div>Add Book</div>
+            <div id="book_closebutton" class="fa-solid fa-square-xmark"></div>
         </div>
-        <div>
-            <label for="author">Author:</label>
-            <input type="text" id="author" value = "akatsuki">
-        </div>
-        <div>
-            <label for="pages">Pages:</label>
-            <input type="number" id="pages" value = "1000">
-        </div>
-        <div>
-            <label for="read" id="readit">Have you read it?</label>
-            <input type="checkbox" id="read">
-        </div>
-        <button id="createbook" type="button">Create Book</button>
-    </form>
+        
+        <form id="formbody" class="speaker-form">        
+            <div class="form-row">
+                <label for="book_title">Title</label>
+                <input type="text" id="book_title" value = "konosuba">
+            </div>
+            <div class="form-row">
+                <label for="book_author">Author</label>
+                <input type="text" id="book_author" value = "akatsuki">
+            </div>
+            <div class="form-row">
+                <label for="book_pages">Pages</label>
+                <input type="number" id="book_pages" value = "1000">
+            </div>
+            <div class="book_checkbox">
+                <label for="book_read" id="readit">Have you read it?</label>
+                <input type="checkbox" id="book_read">
+            </div>            
+        </form>        
+        <button id="book_createbook" type="button">Create Book</button>
+    </div>
 </div>
-<div class="cardcontainer">   
+<div id="cardcontainer">   
 </div>
 <script src="script.js"></script>
 </body>

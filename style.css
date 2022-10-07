@@ -1,8 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Cedarville Cursive', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#mylibrary {
+body {
+    display: flex;
+    flex-direction: column;   
+}
+
+#header {
+    color: #86273c;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(224 221 244);
+}
+
+#addbook {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 5px;
+    margin: 5px;
+    width: 125px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+    border-radius: 10px;    
+}
+
+#addbook:hover {
+    box-shadow: 2px 2px #337735; 
+}
+
+
+/* #mylibrary {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,8 +63,7 @@ form div {
 }
 
 #formcontainer {
-    padding: 15px;
-    gap:10px;
+
 }
 
 label {
@@ -51,18 +88,6 @@ input#read {
     width: auto;
 }
 
-#formcontainer {
-    display: none;
-    flex-direction: column;
-    background-color: antiquewhite;
-    border-radius: 5px;
-    border: 1px solid black;
-    position: absolute;    
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
 
 #formheader {
     text-align: center;
@@ -70,7 +95,7 @@ input#read {
     font-weight: bold;    
 }
 
-#addbook, #createbook {
+#book_createbook {
     width: 100px;
     height: 30px;
     font-size: 1rem;
@@ -88,19 +113,112 @@ label {
     font-size: 1.25rem;
 }
 
-.cardcontainer {
+#cardcontainer {
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: repeat(auto-fit, 250px);
     gap: 20px
 }
 
-.card {
+#cardcontainer div {
     background-color: lightskyblue;
+} */
+
+
+.modal-form {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#modal-formcontainer {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F6F7F8;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#book_closebutton {  
+    cursor: pointer;
+}
+
+#formheader {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
 }
 
 
+.speaker-form-header,
+.speaker-form {
+  width: 300px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-row input[type='text'], .form-row input[type='number'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 300;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+}
+
+.book_checkbox {
+    display: flex;
+    align-self: center;
+    gap:10px;
+}
+
+#formbody {
+    display: flex;
+    flex-direction: column;
+}
 
 
+#book_createbook {
+    align-self: center;
+    margin: 5px;
+    width: 125px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+    border-radius: 10px;    
+}
 
-
+#book_createbook:hover {
+    box-shadow: 2px 2px #337735; 
+}
