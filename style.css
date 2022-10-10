@@ -40,81 +40,6 @@ body {
     box-shadow: 2px 2px #337735; 
 }
 
-
-/* #mylibrary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form div, #createbook {
-    margin: 3px;
-}
-
-button {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-form div {
-    margin: 3px;
-    display: flex;
-    column-gap: 5px;
-    align-items: center;
-    justify-content: center;
-}
-
-#formcontainer {
-
-}
-
-label {
-    display: inline-block;
-    text-align: right;
-    width: 70px;
-}
-
-input {
-  font: 1em sans-serif;
-  width: 250px;
-  border: 1px solid #999;
-  height: 25px;
-}
-
-input#read {
-    width: auto;
-}
-
-#readit {
-    display: inline-block;
-    width: auto;
-}
-
-
-#formheader {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;    
-}
-
-#book_createbook {
-    width: 100px;
-    height: 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: rgb(88, 185, 218);
-    border: 1px solid black;  
-    border-radius: 5px;
-}
-
-#createbook {
-    width: 150px;
-}
-
-label {
-    font-size: 1.25rem;
-}
-*/
-
 #cardcontainer {    
     display: grid;    
     padding: 10px 30px;    
@@ -130,6 +55,7 @@ label {
     flex-direction: column;
     font-family: 'Cedarville Cursive';
     font-size: 24px;
+    font-weight: bold;
     background-color: white;
 
     border: 1px solid darkgray;
@@ -230,7 +156,6 @@ label {
     flex-direction: column;
 }
 
-
 #book_createbook {
     align-self: center;
     margin: 5px;
@@ -238,7 +163,7 @@ label {
     height: 40px;
     font-size: 1rem;
     font-weight: bolder;
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: 1px solid green;
     border-radius: 10px;    
 }

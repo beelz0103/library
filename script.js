@@ -28,16 +28,25 @@ function currentBook() {
 } 
 
 function createBook() {  
-  const booktitle = document.querySelector("#book_title").value
-  const bookauthor = document.querySelector("#book_author").value
-  const bookpages = document.querySelector("#book_pages").value
-  const bookread = document.querySelector("#book_read").checked  
-  myLibrary.push(new Book(booktitle, bookauthor, bookpages, bookread))       
-  currentBook().identifier = book_id.toString()
-  book_id += 1  
-  buildCard(currentBook())
-  hideForm() 
-  document.querySelector("form").reset()
+  const booktitle = document.querySelector("#book_title")
+  const bookauthor = document.querySelector("#book_author")
+  const bookpages = document.querySelector("#book_pages")
+  const bookread = document.querySelector("#book_read")
+  if (checkvalidity(booktitle, bookauthor, bookpages)) { 
+    myLibrary.push(new Book(booktitle.value, bookauthor.value, bookpages.value, bookread.checked))       
+    currentBook().identifier = book_id.toString()
+    book_id += 1  
+    buildCard(currentBook())
+    hideForm() 
+    document.querySelector("form").reset()  
+  }
+}
+
+function checkvalidity (title, author, read) {
+  if (title.value == "") title.reportValidity()
+  else if (author.value == "") author.reportValidity()
+  else if (read.value == "") read.reportValidity()
+  else return true
 }
 
 function buildCard(value) {
@@ -60,11 +69,11 @@ function buildCard(value) {
   const read_btn = document.createElement("button")
   
   if (value.read ) {
-    read_btn.textContent = "read"
+    read_btn.textContent = "Read"
     read_btn.style.backgroundColor = "green"
   }
   else {
-    read_btn.textContent = "not read"
+    read_btn.textContent = "Not Read"
     read_btn.style.backgroundColor = "red"
   }
 
@@ -89,12 +98,12 @@ function changeReadStatus(e) {
   let book = myLibrary.find(element => element.identifier === e.target.parentNode.id);  
   if (book.read) {
     book.read = false
-    e.target.textContent = "not read"
+    e.target.textContent = "Not Read"
     e.target.style.backgroundColor = "red"
   }
   else {
     book.read = true
-    e.target.textContent = "read"
+    e.target.textContent = "Read"
     e.target.style.backgroundColor = "green"
   }   
 }
@@ -128,6 +137,3 @@ window.addEventListener("beforeunload", () => {
 })
 
 loadLibrary();
-
-//ADD VALIDATIONS
-//FORMAT TEXT PROPERLY
