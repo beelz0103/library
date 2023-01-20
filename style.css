@@ -1,125 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 
 body {
-    font-family: 'Roboto', 'Cedarville Cursive', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto", "Cedarville Cursive", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;       
-    background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
 }
 
 #header {
-    color: #86273c;
-    font-size: 3rem;
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(224 221 244);
+  color: #86273c;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(224 221 244);
 }
 
 #addbook {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    gap: 5px;
-    margin: 5px;
-    width: 125px;
-    height: 40px;
-    font-size: 1rem;
-    font-weight: bolder;
-    background-color: #4CAF50; /* Green */
-    border: 1px solid green;
-    border-radius: 10px;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 5px;
+  margin: 5px;
+  width: 125px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: #4caf50; /* Green */
+  border: 1px solid green;
+  border-radius: 10px;
 }
 
 #addbook:hover {
-    box-shadow: 2px 2px #337735; 
+  box-shadow: 2px 2px #337735;
 }
 
-#cardcontainer {    
-    display: grid;    
-    padding: 10px 30px;    
-    gap: 30px 30px;
-    grid-template-rows: repeat(1, 310px);
-    grid-template-columns: repeat(4, 310px);  
-    grid-auto-rows: auto;
-    justify-content: center;  
+#cardcontainer {
+  display: grid;
+  padding: 10px 30px;
+  gap: 30px 30px;
+  grid-template-rows: repeat(1, 310px);
+  grid-template-columns: repeat(4, 310px);
+  grid-auto-rows: auto;
+  justify-content: center;
 }
 
 #cardcontainer > div {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Cedarville Cursive';
-    font-size: 24px;
-    font-weight: bold;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Cedarville Cursive";
+  font-size: 24px;
+  font-weight: bold;
+  background-color: white;
 
-    border: 1px solid darkgray;
-    box-shadow: (0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 5px;
-    padding: 20px;
+  border: 1px solid darkgray;
+  box-shadow: (0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 #cardcontainer > div > button {
-    align-self: center;
-    margin: 5px;
-    width: 125px;
-    height: 40px;
-    font-size: 1rem;
-    font-weight: bolder;
-    border-radius: 10px;    
-    align-self: center;
+  align-self: center;
+  margin: 5px;
+  width: 125px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 10px;
+  align-self: center;
 }
 
 .modal-form {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
 #modal-formcontainer {
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #F6F7F8;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f7f8;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
 }
 
 .show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-#book_closebutton {  
-    cursor: pointer;
+#book_closebutton {
+  cursor: pointer;
 }
 
 #formheader {
-    font-size: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
-
 
 .speaker-form-header,
 .speaker-form {
@@ -127,47 +126,60 @@ body {
 }
 
 .form-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
-.form-row input[type='text'], .form-row input[type='number'] {
-    background-color: #FFFFFF;
-    border: 1px solid #D6D9DC;
-    border-radius: 3px;
-    width: 300;
-    padding: 7px;
-    font-size: 14px;
+.form-row input[type="text"],
+.form-row input[type="number"] {
+  background-color: #ffffff;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  width: 300;
+  padding: 7px;
+  font-size: 14px;
 }
 
 .form-row label {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .book_checkbox {
-    display: flex;
-    align-self: center;
-    gap:10px;
+  display: flex;
+  align-self: center;
+  gap: 10px;
 }
 
 #formbody {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #book_createbook {
-    align-self: center;
-    margin: 5px;
-    width: 125px;
-    height: 40px;
-    font-size: 1rem;
-    font-weight: bolder;
-    background-color: #4CAF50;
-    border: 1px solid green;
-    border-radius: 10px;    
+  align-self: center;
+  margin: 5px;
+  width: 125px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: #4caf50;
+  border: 1px solid green;
+  border-radius: 10px;
 }
 
 #book_createbook:hover {
-    box-shadow: 2px 2px #337735; 
+  box-shadow: 2px 2px #337735;
+}
+
+input:valid {
+  border: none;
+  outline: 2px solid lightgreen;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-radius: 5px;
+  outline: 2px solid red;
+  border-radius: 5px;
 }
